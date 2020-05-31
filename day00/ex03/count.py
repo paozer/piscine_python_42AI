@@ -10,12 +10,19 @@ def text_analyzer(*args):
         text = input("What is the text to analyse ?\n")
     else:
         text = args[0]
-    uppercase = ''.join(c for c in text if c in string.ascii_uppercase)
-    lowercase = ''.join(c for c in text if c in string.ascii_lowercase)
-    punctuation = ''.join(c for c in text if c in string.punctuation)
-    whitespace = ''.join(c for c in text if c in string.whitespace)
-    print('The text contains {} characters:\n'.format(len(text)))
-    print('- {} upper letters\n'.format(len(uppercase)))
-    print('- {} lower letters\n'.format(len(lowercase)))
-    print('- {} punctuation marks\n'.format(len(punctuation)))
-    print('- {} spaces'.format(len(whitespace)))
+    upper = lower = punct = space = 0
+    for char in text:
+        if char in string.ascii_uppercase:
+            upper += 1
+        elif char in string.ascii_lowercase:
+            lower += 1
+        elif char in string.punctuation:
+            punct += 1
+        elif char in string.whitespace:
+            space += 1
+    print()
+    print(f'The text contains {len(text)} characters:')
+    print(f'- {upper} upper letters')
+    print(f'- {lower} lower letters')
+    print(f'- {punct} punctuation marks')
+    print(f'- {space} spaces')

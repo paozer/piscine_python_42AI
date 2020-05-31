@@ -2,9 +2,9 @@ from time import time, sleep
 
 
 def ft_progress(lst):
-    start = time()
     now = 0
     prev_time = 0
+    start = time()
     for i in range(len(lst)):
         p = int(i / len(lst) * 100)
         e = int(p * 0.5)
@@ -20,11 +20,12 @@ def ft_progress(lst):
     print(f'{len(lst)}/{len(lst)} {t - start:.2f}s')
 
 
-listy = range(100)
-ret = 0
+if __name__ == "__main__":
+    listy = range(100)
+    ret = 0
 
-for elem in ft_progress(listy):
-    ret += (elem + 3) % 5
-    sleep(0.01)
+    for elem in ft_progress(listy):
+        ret += (elem + 3) % 5
+        sleep(0.01)
 
-print(ret)
+    print(ret)

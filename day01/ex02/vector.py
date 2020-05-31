@@ -61,6 +61,8 @@ class Vector:
         return f'values: {self.values} size: {self.size}'
 
     def __repr__(self):
+        # add object
+        # address
         return f'Vector({self.values})'
 
     def __init__(self, values):

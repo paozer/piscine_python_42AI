@@ -1,7 +1,7 @@
 from random import randint
 
-secret = randint(1, 99)
 count = 0
+secret = randint(1, 99)
 user_input = input('Welcome! Enter your guess or exit ')
 
 while user_input != 'exit':

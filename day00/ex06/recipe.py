@@ -67,17 +67,18 @@ cookbook = {
             'prep_time': 15,
             },
         }
-choice = '1'
 
-while choice != '5':
-    if choice not in '12345':
-        print('unknown menu choice - retry')
-    else:
-        print('Menu')
-        print('1 - print recipe')
-        print('2 - print recipe names')
-        print('3 - remove recipe')
-        print('4 - add recipe')
-        print('5 - quit')
-    choice = input('')
-    handle_input(choice)
+if __name__ == "__main__":
+    choice = '1'
+    while choice != '5':
+        if choice not in '12345':
+            print('unknown menu choice - retry')
+        else:
+            print('Menu')
+            print('1 - print recipe')
+            print('2 - print recipe names')
+            print('3 - remove recipe')
+            print('4 - add recipe')
+            print('5 - quit')
+        choice = input('')
+        handle_input(choice)

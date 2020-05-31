@@ -1,8 +1,6 @@
 import sys
 
-if len(sys.argv) == 1:
-    exit()
-elif len(sys.argv) > 2:
+if len(sys.argv) != 2:
     print("ERROR")
     exit()
 

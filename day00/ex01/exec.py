@@ -1,5 +1,7 @@
 import sys
 
-rev = sys.argv[::-1]
-for arg in rev[:-1:]:
-    print(arg.swapcase()[::-1])
+if len(sys.argv) < 2:
+    exit()
+for arg in sys.argv[::-1][:-1:]:
+    print(arg.swapcase()[::-1], end=' ')
+print()
